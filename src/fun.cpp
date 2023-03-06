@@ -6,7 +6,7 @@ unsigned int faStr1(const char *str) {
   int countWithNumber = 0;
   bool isWord = false;
   bool wordWithNumber = false;
-  while(*str) {
+  while (*str) {
     if (*str >= '0' && *str <= '9' && wordWithNumber == false) {
         countWithNumber++;
         wordWithNumber = true;
@@ -24,7 +24,6 @@ unsigned int faStr1(const char *str) {
 }
 
 unsigned int faStr2(const char *str) {
-  char *str ="Hello world!";
   int count = 0;
   int isOurWord = 0;
   while (*str) {
@@ -32,7 +31,7 @@ unsigned int faStr2(const char *str) {
       isOurWord = 1;
     } else if (*str >= 'a' && *str <= 'z' && isOurWord == 1) {
       isOurWord = 1;
-    } else if (*str != ' ' && isOurWord == 1){
+    } else if (*str != ' ' && isOurWord == 1) {
       isOurWord = -1;
     } else if (*str == ' ' && isOurWord == 1) {
       count++;
